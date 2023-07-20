@@ -9,7 +9,6 @@ public class ResourceCentre {
     private static final int ITEM_TYPE_CHROMEBOOK = 2;
 
 	public static void main(String[] args) 
-		branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 
     private static final int ITEM_TYPE_CAMCODER = 1;
 
