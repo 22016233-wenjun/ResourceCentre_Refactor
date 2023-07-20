@@ -101,7 +101,7 @@ public class ResourceCentre {
 
                 } else if (itemType == ITEM_TYPE_CHROMEBOOK) {
 
-                    // Add Chromebook
+                    // Add Chromebook //
 
                     Chromebook cb = inputChromebook();
 
