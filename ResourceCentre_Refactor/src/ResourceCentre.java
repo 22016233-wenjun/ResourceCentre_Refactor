@@ -89,7 +89,7 @@ public class ResourceCentre {
 
                 if (itemType == ITEM_TYPE_CAMCODER) {
 
-                    // Add a camcorder
+                    // Add a camcorder //
 
                     Camcorder cc = inputCamcorder();
 
