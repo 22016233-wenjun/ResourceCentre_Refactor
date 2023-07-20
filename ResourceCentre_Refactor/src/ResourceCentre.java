@@ -4,10 +4,12 @@ import java.util.ArrayList;
  
 
 public class ResourceCentre {
-
  
 
     private static final int ITEM_TYPE_CHROMEBOOK = 2;
+
+	public static void main(String[] args) 
+		branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 
     private static final int ITEM_TYPE_CAMCODER = 1;
 
@@ -19,9 +21,25 @@ public class ResourceCentre {
 
     private static final int OPTION_VIEW = 1;
 
-    private static final int OPTION_QUIT = 5;
 
+    private static final int OPTION_QUIT = 5;
+=======
+			if (option == 1) {
+				// View all items 
+				ResourceCentre.viewAllCamcorder(camcorderList);
+				ResourceCentre.viewAllChromebook(chromebookList);
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
+
+<<<<<<< HEAD
  
+=======
+			} else if (option == 2) {
+				// Add a new item
+				ResourceCentre.setHeader("ADD");			
+				itemTypeMenu();
+				
+				int itemType = Helper.readInt("Enter option to select item type > ");
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 
     
 
@@ -29,11 +47,38 @@ public class ResourceCentre {
 
  
 
+<<<<<<< HEAD
         ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
+=======
+			} else if (option == 3) {
+				// Loan item
+				ResourceCentre.setHeader("LOAN");			
+				itemTypeMenu();
+				
+				int itemType = Helper.readInt("Enter option to select item type > ");
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 
         ArrayList<Chromebook> chromebookList = new ArrayList<Chromebook>();
 
+<<<<<<< HEAD
  
+=======
+			} else if (option == 4) {
+				// Return item
+				ResourceCentre.setHeader("RETURN");				
+				itemTypeMenu();
+				
+				int itemType = Helper.readInt("Enter option to select item type > ");
+				if (itemType == 1) {
+					// Return camcorder
+					ResourceCentre.returnCamcorder(camcorderList);
+				} else if (itemType == 2) {
+					// Return Chromebook
+					ResourceCentre.returnChromebook(chromebookList);
+				} else {
+					System.out.println("Invalid type");
+				}
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 
         camcorderList.add(new Camcorder("CC001", "Sony HDR-CX405", 35));
 
@@ -41,7 +86,27 @@ public class ResourceCentre {
 
         chromebookList.add(new Chromebook("CB001", "ASUS Chromebook ", "Win 10"));
 
+<<<<<<< HEAD
         chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
+=======
+	/**
+	 * 
+	 */
+	public static void itemTypeMenu() {
+		ResourceCentre.setHeader("ITEM TYPES");
+		System.out.println("1. Camcorder");
+		System.out.println("2. Chromebook");
+	}
+
+	public static void menu() {
+		ResourceCentre.setHeader("RESOURCE CENTRE APP");
+		System.out.println("1. Display Inventory");
+		System.out.println("2. Add item");
+		System.out.println("3. Loan item");
+		System.out.println("4. Return item");
+		System.out.println("5. Quit");
+		Helper.line(80, "-");
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 
  
 
@@ -51,13 +116,69 @@ public class ResourceCentre {
 
         while (option != OPTION_QUIT) {
 
+<<<<<<< HEAD
  
+=======
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 
+<<<<<<< HEAD
             ResourceCentre.menu();
+=======
+	    // Items
+	    for (Camcorder camcorder : camcorderList) {
+	        output += String.format("%-10s %-30s %-10s %-10s %-20d\n",
+	                camcorder.getAssetTag(),
+	                camcorder.getDescription(),
+	                showAvailability(camcorder.getIsAvailable()),
+	                camcorder.getDueDate(),
+	                camcorder.getOpticalZoom());
+	    }
 
+	    return output;
+	}
+	
+	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
+		ResourceCentre.setHeader("CAMCORDER LIST");
+		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
+				"AVAILABLE", "DUE DATE","OPTICAL ZOOM");
+		 output += retrieveAllCamcorder(camcorderList);	 
+		System.out.println(output);
+	}
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
+
+<<<<<<< HEAD
             option = Helper.readInt("Enter an option > ");
+=======
+	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
+		String output = "";
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 
+<<<<<<< HEAD
  
+=======
+
+		    // Items
+		    for (Chromebook chromebook : chromebookList) {
+		        output += String.format("%-10s %-30s %-10s %-10s %-20s\n",
+		                chromebook.getAssetTag(),
+		                chromebook.getDescription(),
+		                showAvailability(chromebook.getIsAvailable()),
+		                chromebook.getDueDate(),
+		                chromebook.getOs());
+		    }
+
+		    return output;
+		}
+	
+	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
+		
+		ResourceCentre.setHeader("CHROMEBOOK LIST");
+		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
+				 "AVAILABLE", "DUE DATE","OPERATING SYSTEM");
+		 output += retrieveAllChromebook(chromebookList);
+		System.out.println(output);
+	}
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 
             if (option == OPTION_VIEW) {
 

@@ -12,9 +12,16 @@ private int opticalZoom;
 	}
 	
 	public String toString(){
+<<<<<<< HEAD
 		// Write your codes here //
 		String output = super.toString();
 		output += String.format("%-63s %-20d", output, opticalZoom);
+=======
+		
+		// Write your codes here
+		String output = super.toString();
+		output = String.format("%-63s %-20d", output, opticalZoom);
+>>>>>>> branch 'master' of https://github.com/22016233-wenjun/ResourceCentre_Refactor.git
 		return output;
 	}
 }
