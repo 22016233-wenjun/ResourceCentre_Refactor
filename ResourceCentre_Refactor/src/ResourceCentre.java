@@ -29,7 +29,7 @@ public class ResourceCentre {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
 				itemTypeMenu();
-				//..//
+				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
 				if (itemType == 1) {
